@@ -33,10 +33,27 @@ var sum = function(array) {
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
+    var sum = 0;
+    if (array.length === 0) {
+        return 0;
+    }
+    if (array.length === 1) {
+        return sum(array[0]);
+    }
+    // need recursive call to sumArray for array length over 1 ********************************************
+
+
+
 };
 
 // 4. Check if a number is even.
 var isEven = function(n) {
+    // not sure how this involves recursion since there is only a single number input expected ************
+    if (n % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
 };
 
 // 5. Sum all integers below a given integer.
@@ -57,6 +74,12 @@ var sumBelow = function(n) {
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
 var range = function(x, y) {
+    if (x === y) {
+        return x;
+    }
+    if (x < y) {
+        return y + range(x, y - 1);
+    }
 };
 
 // 7. Compute the exponent of a number.
@@ -65,6 +88,12 @@ var range = function(x, y) {
 // exponent(4,3); // 64
 // https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/computing-powers-of-a-number
 var exponent = function(base, exp) {
+    if (exp === 1) {
+        return base;
+    }
+    if (exp > 1) {
+        return base * exponent(base, exp - 1);
+    }
 };
 
 // 8. Determine if a number is a power of two.
@@ -72,6 +101,15 @@ var exponent = function(base, exp) {
 // powerOfTwo(16); // true
 // powerOfTwo(10); // false
 var powerOfTwo = function(n) {
+    if (n === 1) {
+        return false;
+    }
+    if (n === 2) {
+        return true;
+    }
+    if (n > 2) {
+        return powerOfTwo(n/2);
+    }
 };
 
 // 9. Write a function that reverses a string.
