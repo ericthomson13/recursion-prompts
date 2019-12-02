@@ -171,11 +171,26 @@ var gcd = function(x, y) {
 // compareStr('house', 'houses') // false
 // compareStr('tomato', 'tomato') // true
 var compareStr = function(str1, str2) {
+    if (str1.length !== str2.length) {
+        return false;
+    }
+    // how to change length throughout function so doesn't just check the last in str repeatedly
 };
 
 // 16. Write a function that accepts a string and creates an array where each letter
 // occupies an index of the array.
 var createArray = function(str) {
+    var arr = [];
+    if (str.length === 0) {
+        return [];
+    }
+    if (str.length === 1) {
+        arr.push(str);
+    }
+    if (str.length > 1) {
+        arr.push(str[0]);
+        return createArray(str.substr(1));
+    }
 };
 
 // 17. Reverse the order of an array
