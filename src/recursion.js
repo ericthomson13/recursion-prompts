@@ -17,7 +17,7 @@ var factorial = function(n) {
         return n * factorial(n - 1);
     }
 };
-// TESTED WITH MULTIPLE VALUES IN DEV TOOLS ON CHROME ^^^^ WOHOO!
+// **********TESTED WITH MULTIPLE VALUES IN DEV TOOLS ON CHROME ^^^^ WOHOO!
 
 // 2. Compute the sum of an array of integers.
 // sum([1,2,3,4,5,6]); // 21
@@ -30,7 +30,7 @@ var sum = function(array) {
         return array.pop() + sum(array);
     }
 };
-// TESTED WITH MULTIPLE VALUES IN DEV TOOLS ON CHROME ^^^^ WOHOO!
+// ************TESTED WITH MULTIPLE VALUES IN DEV TOOLS ON CHROME ^^^^ WOHOO!
 
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
@@ -50,12 +50,13 @@ var arraySum = function(array) {
 
 // 4. Check if a number is even.
 var isEven = function(n) {
-    // not sure how this involves recursion since there is only a single number input expected ************
-    if (n % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
+   if (n === 0) {
+       return true;
+   } else if (n === 1) {
+       return false;
+   } else {
+       isEven(n-2);
+   }
 };
 
 // 5. Sum all integers below a given integer.
