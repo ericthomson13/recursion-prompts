@@ -198,7 +198,7 @@ var createArray = function(str) {
 var reverseArr = function(array) {
   var reversed = "";
   if (array.length === 1) {
-      return reversed.push(array[0]);
+      return reversed += array.pop();
   } else {
       reversed += array.pop();
       reverseArr(array);
