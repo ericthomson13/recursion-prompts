@@ -17,6 +17,7 @@ var factorial = function(n) {
         return n * factorial(n - 1);
     }
 };
+// TESTED WITH MULTIPLE VALUES IN DEV TOOLS ON CHROME ^^^^ WOHOO!
 
 // 2. Compute the sum of an array of integers.
 // sum([1,2,3,4,5,6]); // 21
@@ -26,9 +27,10 @@ var sum = function(array) {
         return 0;
     }
     if (index >= 0) {
-        return array[index] + sum(array[index - 1]);
+        return array.pop() + sum(array);
     }
 };
+// TESTED WITH MULTIPLE VALUES IN DEV TOOLS ON CHROME ^^^^ WOHOO!
 
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
