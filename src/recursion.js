@@ -10,10 +10,10 @@ var factorial = function(n) {
     if (n < 0) {
         return null;
     }
-    if (n  === 0) {
+    if (n  === 1) {
         return 1 ;
     }
-    if (n >= 1) {
+    if (n > 1) {
         return factorial(n -1);
     } 
     return n * n -1;
